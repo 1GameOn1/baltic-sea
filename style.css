@@ -161,8 +161,3 @@ body{
 	width: 100%;
 	transform: scale(-1, 1)
 }
-
-.third{
-	padding: 50px;
-	background-color: rgba(0, 0, 0, 0.6);
-}
