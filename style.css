@@ -1,0 +1,168 @@
+body{
+	margin: 0;
+	padding: 0;
+	background-color: black;
+	color: white;
+	font-family: Verdana;
+	font-size: 30px;
+	background-image: url(img/MG_8877-1main.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	overflow-x: hidden;
+}
+
+.head{
+	width:100%;
+	height:100%;
+	padding: 0;
+}
+
+.wrap{
+	height: 100vh;
+	display: flex;
+}
+
+.wrap-lb{
+	margin: auto;
+	text-align: center;
+  	transform: translate(0, 120%);
+  	opacity: 0;
+  	transition: all 1s ease 0s;
+}
+
+.wrap-lb._active{
+	transform: translate(0px, 0px);
+  	opacity: 1;
+}
+
+.lb{
+	padding: 40px;
+	border: 2px solid white;
+	border-right: none;
+	border-left: none;
+}
+
+.wrap-f{
+	width: 100%;
+	display: inline-block;
+}
+
+.pic{
+	float: right;
+	margin-left: 10%;
+	width: 50%;
+	transform: translate(20%, 0);
+  	opacity: 0;
+  	transition: all 0.8s ease 0s;
+}
+
+.pic._active{
+	transform: translate(0px, 0px);
+  	opacity: 1;
+}
+
+.first{
+	padding: 50px;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+.inf{
+	display: inline-block;
+	width: 40%;
+	transform: translate(-20%, 0);
+ 	opacity: 0;
+  	transition: all 0.8s ease 0s;
+}
+
+.inf._active{
+	transform: translate(0px, 0px);
+  	opacity: 1;
+}
+
+.inf-p{
+	margin-top: 30px;
+}
+
+.second{
+	width: 100%;
+	position: absolute;
+	background-image: url(img/d_7moztxsauu7ag3.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	opacity: 0;
+  	transition: all 0.8s ease 0s;
+}
+
+.second._active{
+	
+  	opacity: 1;
+}
+
+.wrap-s{
+
+	height: 100vh;
+}
+
+.inf-p1{
+	position: relative;
+	margin-top: 200px;
+	margin-left: 100px;
+	width: 20%;
+	transform: translate(-20%, 0);
+  	opacity: 0;
+  	transition: all 0.8s ease 0s;
+}
+
+.inf-p1._active{
+	transform: translate(0px, 0px);
+  	opacity: 1;
+}
+
+.inf-pr{
+	position: relative;
+	list-style-type: none;
+
+}
+
+.inf-p2{
+
+	position: relative;
+	margin-bottom: 200px;
+	margin-right: 100px;
+	text-align: right;
+	width: 20%;
+	float: right;
+	transform: translate(20%, 0);
+  	opacity: 0;
+  	transition: all 0.8s ease 0s;
+}
+
+.inf-p2._active{
+	transform: translate(0px, 0px);
+  	opacity: 1;
+}
+
+.inf-p1 p{
+	width: 90%;
+}
+
+.inf-p2 p{
+	width: 90%;
+}
+
+.inf-p1 img{
+	width: 100%;
+}
+
+.inf-p2 img{
+	width: 100%;
+	transform: scale(-1, 1)
+}
+
+.third{
+	padding: 50px;
+	background-color: rgba(0, 0, 0, 0.6);
+}

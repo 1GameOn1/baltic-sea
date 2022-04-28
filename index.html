@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Эвтрофикация в Балтийском море</title>
+</head>
+<body>
+  <section class="head">
+    <div class="wrap">
+      <div class="wrap-lb _anim-items">
+        <h2 class="lb">ЭВТРОФИКАЦИЯ</h2>
+        <div class="lb-2">в Балтийском море</div>
+      </div>
+    </div>
+  </section>
+ <section class="first">
+  <div class="wrap-f">
+    <div class="inf _anim-items">
+      <p>Эвтрофикация (от др.-греч. εὐτροφία — хорошее питание) — насыщение водоёмов биогенными элементами, сопровождающееся ростом биологической продуктивности водных бассейнов.</p>
+    </div>
+    <img src="img\Эвтрофикация.png" class="pic _anim-items">
+  </div>
+ </section>
+ <section class="second _anim-items">
+    <div class="wrap-s">         
+          <ul class="inf-pr">
+            <li class="inf-p2 _anim-items"><p>Рост биологической продуктивности водных бассейнов</p><img src="img\line.png"></li>
+            <li class="inf-p1 _anim-items"><p>Основные химические элементы, способствующие эвтрофикации, — фосфор и азот</p><img src="img\line.png"></li>
+            <li class="inf-p1 _anim-items"><p>Увеличение донных отложений</p><img src="img\line.png"></li>
+            <li class="inf-p2 _anim-items"><p>Формирование новой экосистемы — болото</p><img src="img\line.png"></li>        
+          </ul>
+    </div>
+  </section>  
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript">
+
+            const animItems = document.querySelectorAll('._anim-items');
+
+    if (animItems.length > 0){
+      window.addEventListener('scroll', animOnScroll);
+      function animOnScroll() {
+        for (let index = 0; index < animItems.length; index++) {
+          const animItem = animItems[index];
+          const animItemHeight = animItem.offsetHeight;
+          const animItemOffset = offset(animItem).top;
+          const animStart = 4;
+
+          let animItemPoint = window.innerHeight - animItemHeight / animStart;
+          if (animItemHeight > window.innerHeight) {
+            animItemPoint = window.innerHeight - window.innerHeight / animStart;
+          }
+
+          if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
+           animItem.classList.add('_active');
+          } else {
+            animItem.classList.remove('_active');
+          }
+        }
+      }
+      function offset(el) {
+        const rect = el.getBoundingClientRect(),
+          scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+          scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
+
+      }
+      animOnScroll();
+    }
+
+  </script>
+</body>
+</html>
